@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Базовые стили для кнопки */
+        .my-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            
+            /* Изначальный цвет — зелёный */
+            background-color: green; 
+        }
+
+        /* Специальный класс с красным цветом */
+        .my-button.red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Создаем кнопку с классом стилей -->
+    <button class="my-button" id="btn">Нажми на меня</button>
+
+    <script>
+        // 1. Находим кнопку на странице по её ID
+        const button = document.getElementById('btn');
+
+        // 2. Слушаем клик по кнопке
+        button.addEventListener('click', function() {
+            // 3. Метод toggle добавляет класс 'red', если его нет, 
+            // и удаляет, если он уже есть. Цвет меняется туда-обратно!
+            button.classList.toggle('red');
+        });
+    </script>
+
+</body>
+</html>
